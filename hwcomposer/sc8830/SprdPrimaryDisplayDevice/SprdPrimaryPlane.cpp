@@ -165,8 +165,8 @@ void SprdPrimaryPlane::AttachFramebufferTargetLayer(hwc_layer_1_t *FBTargetLayer
 {
     const native_handle_t *pNativeHandle = FBTargetLayer->handle;
     struct private_handle_t *privateH = (struct private_handle_t *)pNativeHandle;
-    unsigned long phy_addr = 0;
-    size_t size = 0;
+    int phy_addr = 0;
+    int size = 0;
 
     mDisplayFormat = privateH->format;
 
@@ -190,8 +190,8 @@ bool SprdPrimaryPlane::SetDisplayParameters(hwc_layer_1_t *AndroidLayer)
 
     const native_handle_t *pNativeHandle = AndroidLayer->handle;
     struct private_handle_t *privateH = (struct private_handle_t *)pNativeHandle;
-    unsigned long phy_addr = 0;
-    size_t size = 0;
+    int phy_addr = 0;
+    int size = 0;
 
     if (privateH == NULL)
     {
